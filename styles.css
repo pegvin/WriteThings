@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Cousine&family=Merriweather&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+/*
+font-family: 'Cousine', monospace;
+font-family: 'Merriweather', serif;
+*/
+:root {
+	font-size: 16px;
+	--mainFont: 'Cousine', monospace;
+}
+
+html, body {
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	display: block;
+	margin: 0 auto;
+	padding-top: 2rem;
+
+	max-width: 750px;
+	height: 90%;
+}
+
+textarea {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	color: #333;
+	tab-size: 4;
+	font-size: 1.9rem;
+	font-family: var(--mainFont), monospace;
+
+	word-break: normal;
+	overflow-wrap: break-word;
+	white-space: pre-wrap;
+
+	resize: none;
+	outline: none;
+	box-shadow: none;
+	border: none;
+}
+
+textarea::-webkit-scrollbar {
+	display: none; /* Chrome, Safari and Opera */
+}
+
+textarea {
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+}
+
+footer {
+	display: block;
+	width: 100%;
+	height: 10%;
+
+	margin: 0 auto;
+	padding: 1.3rem 0 0 0;
+
+	color: #555;
+	font-family: 'Cousine', monospace;
+	font-size: 0.9rem;
+
+	line-height: 1.5;
+	text-align: center;
+}
+
+footer div.footerControls, footer span.separator {
+	user-select: none;
+}
+
+footer span.separator {
+	padding: 0 0.5rem;
+}
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>WriteThings</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="main.js"></script>
+</head>
+<body>
+	<main>
+		<textarea tabindex="-1" style="--font: mainMono;" placeholder="start writing..." spellcheck="false"></textarea>
+		<footer>
+			<div><!--
+				--><span id="WordCount">0 words</span><!--
+				--><span class="separator">·</span><!--
+				--><span id="CharacterCount">0 chars</span><!--
+				--><span class="separator">·</span><!--
+				--><span id="TimeToRead">Nothing to read</span><!--
+			--></div>
+			<div class="footerControls"><!--
+			--><span><!--
+				--><input tabindex="0" type="checkbox" id="UseFontSerif" name="UseFontSerif"><!--
+				--><label for="UseFontSerif"> Use Serif Font</label><!--
+			--></span><!--
+				--><span class="separator">·</span><!--
+			--><span><!--
+				--><input type="checkbox" id="EnableSpellCheck" name="EnableSpellCheck"><!--
+				--><label for="EnableSpellCheck"> Enable Spell Check</label><!--
+			--></span><!--
+			--></div>
+		</footer>
+	</main>
+</body>
+</html>
+
