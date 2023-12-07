@@ -38,7 +38,7 @@ window.onload = function() {
 
 	document.getElementById("UseFontSerif").onchange = function(e) {
 		if (e.target.checked == true) {
-			document.querySelector(':root').style.setProperty("--mainFont", "Merriweather, serif");
+			document.querySelector(':root').style.setProperty("--mainFont", "'Courier Prime', serif");
 		} else {
 			document.querySelector(':root').style.setProperty("--mainFont", "'Cousine', monospace");
 		}

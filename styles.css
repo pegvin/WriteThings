@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cousine&family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Cousine&display=swap');
 
 * {
 	box-sizing: border-box;
@@ -6,11 +6,23 @@
 
 /*
 font-family: 'Cousine', monospace;
-font-family: 'Merriweather', serif;
+font-family: 'Courier Prime', serif;
 */
 :root {
 	font-size: 16px;
 	--mainFont: 'Cousine', monospace;
+}
+
+@media (max-width: 750px) {
+	:root {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 360px) {
+	:root {
+		font-size: 12px;
+	}
 }
 
 html, body {
@@ -34,6 +46,7 @@ textarea {
 	display: block;
 	width: 100%;
 	height: 100%;
+	padding: 0 0.5rem;
 
 	color: #333;
 	tab-size: 4;
