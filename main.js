@@ -1,8 +1,16 @@
 window.onload = function() {
 	let textArea = document.querySelector('textarea');
 
+	// Save Text Automatically
+	const MySaveFunc = function() {
+		localStorage.setItem("textData", textArea.value);
+	};
+	textArea.onfocusout = MySaveFunc;
+	textArea.onfocusin = MySaveFunc;
+	window.onbeforeunload = MySaveFunc;
+
 	// Attach Tab Indent Hook
-	textArea.addEventListener('keydown', function(e) {
+	textArea.onkeydown = function(e) {
 		if (e.key == 'Tab') {
 			e.preventDefault();
 			var start = this.selectionStart;
@@ -15,10 +23,9 @@ window.onload = function() {
 			this.selectionStart =
 			this.selectionEnd = start + 1;
 		}
-	});
+	};
 
-	// Attach Word Count & Character Count Hook
-	textArea.addEventListener('keyup', function() {
+	const OnTextAreaChange = function() {
 		const wpm = 225;
 		const match = textArea.value.match(/\S+/g);
 		if (match != null) {
@@ -32,9 +39,10 @@ window.onload = function() {
 			document.getElementById("CharacterCount").innerText = `0 chars`;
 			document.getElementById("TimeToRead").innerText = `Nothing to read`;
 		}
-	});
+	}
 
-	textArea.focus();
+	// Attach Word Count & Character Count Hook
+	textArea.onkeyup = OnTextAreaChange;
 
 	document.getElementById("UseFontSerif").onchange = function(e) {
 		if (e.target.checked == true) {
@@ -52,5 +60,13 @@ window.onload = function() {
 		}
 		textArea.focus();
 	}
+
+	let textData = localStorage.getItem("textData");
+	if (textData) {
+		textArea.value = textData;
+		OnTextAreaChange();
+	}
+
+	textArea.focus();
 }
 
