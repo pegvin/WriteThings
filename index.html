@@ -23,8 +23,22 @@
 			--></div>
 			<div class="footerControls"><!--
 			--><span><!--
-				--><input tabindex="0" type="checkbox" id="UseFontSerif" name="UseFontSerif"><!--
-				--><label for="UseFontSerif"> Use Serif Font</label><!--
+				--><select id="fontSelector"><!--
+					--><optgroup label="Serif"><!--
+						--><option value="'Courier Prime', serif">Courier Prime</option><!--
+						--><option value="'Merriweather', serif">Merriweather</option><!--
+					--></optgroup><!--
+					--><optgroup label="Sans Serif"><!--
+						--><option value="'Atkinson Hyperlegible', sans-serif">Atkinson Hyperlegible</option><!--
+						--><option value="'Geologica', sans-serif">Geologica</option><!--
+					--></optgroup><!--
+					--><optgroup label="Monospace"><!--
+						--><option value="'Cousine', monospace" selected>Cousine</option><!--
+						--><option value="'Ubuntu Mono', monospace">Ubuntu Mono</option><!--
+					--></optgroup><!--
+				--></select><!--
+				--><input type="number" id="fontSize" name="fontSize" min="12" max="100" value="20"><!--
+				--><label for="fontSelector"> Font</label><!--
 			--></span><!--
 				--><span class="separator">·</span><!--
 			--><span><!--

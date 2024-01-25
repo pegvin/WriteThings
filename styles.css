@@ -1,16 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Cousine&display=swap');
+/* https://fonts.google.com/share?selection.family=Atkinson+Hyperlegible|Courier+Prime|Cousine|Geologica|Merriweather|Ubuntu+Mono */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Courier+Prime&family=Cousine&family=Geologica&family=Merriweather&family=Ubuntu+Mono&display=swap');
 
 * {
 	box-sizing: border-box;
 }
 
 /*
+font-family: 'Atkinson Hyperlegible', sans-serif;
+font-family: 'Courier Prime', monospace;
 font-family: 'Cousine', monospace;
-font-family: 'Courier Prime', serif;
+font-family: 'Geologica', sans-serif;
+font-family: 'Merriweather', serif;
+font-family: 'Ubuntu Mono', monospace;
 */
+
 :root {
 	font-size: 16px;
 	--mainFont: 'Cousine', monospace;
+	--mainFontSize: 20px;
 }
 
 @media (max-width: 750px) {
@@ -50,7 +57,7 @@ textarea {
 
 	color: #333;
 	tab-size: 4;
-	font-size: 1.9rem;
+	font-size: var(--mainFontSize);
 	font-family: var(--mainFont), monospace;
 
 	word-break: normal;
@@ -96,3 +103,17 @@ footer span.separator {
 	padding: 0 0.5rem;
 }
 
+select#fontSelector {
+	font-family: 'Cousine', monospace;
+	padding: 0.1rem 0.2rem;
+	border: 1px solid #CCC;
+	max-width: 8rem;
+	border-right: none;
+}
+
+input#fontSize {
+	font-family: 'Cousine', monospace;
+	padding: 0.1rem 0 0.1rem 0.3rem;
+	border: 1px solid #CCC;
+	max-width: 4rem;
+}

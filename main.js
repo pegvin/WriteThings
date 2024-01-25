@@ -44,14 +44,17 @@ window.onload = function() {
 	// Attach Word Count & Character Count Hook
 	textArea.onkeyup = OnTextAreaChange;
 
-	document.getElementById("UseFontSerif").onchange = function(e) {
-		if (e.target.checked == true) {
-			document.querySelector(':root').style.setProperty("--mainFont", "'Courier Prime', serif");
-		} else {
-			document.querySelector(':root').style.setProperty("--mainFont", "'Cousine', monospace");
-		}
+	document.getElementById("fontSelector").onchange = function(e) {
+		document.querySelector(':root').style.setProperty("--mainFont", e.target.value);
 		textArea.focus();
 	}
+
+	document.getElementById("fontSize").onchange = function(e) {
+		if (e.target.value > 100) e.target.value = 100;
+		document.querySelector(':root').style.setProperty("--mainFontSize", `${e.target.value}px`);
+		textArea.focus();
+	}
+
 	document.getElementById("EnableSpellCheck").onchange = function(e) {
 		if (e.target.checked == true) {
 			textArea.setAttribute("spellcheck", "true");
