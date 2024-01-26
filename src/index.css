@@ -57,8 +57,6 @@ textarea {
 
 	color: #333;
 	tab-size: 4;
-	font-size: var(--mainFontSize);
-	font-family: var(--mainFont), monospace;
 
 	word-break: normal;
 	overflow-wrap: break-word;
@@ -95,11 +93,11 @@ footer {
 	text-align: center;
 }
 
-footer div.footerControls, footer span.separator {
+div.EditorConfigurator, span.separator {
 	user-select: none;
 }
 
-footer span.separator {
+span.separator {
 	padding: 0 0.5rem;
 }
 
